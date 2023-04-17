@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Developers facts</h1>
+    <h2>Cosas que necesitamos para ser una buena programadora</h2>
+    <ul>
+        <li id="primer-item">Llevar bien la frustración</li>
+        <li>Practicar mucho</li>
+        <li>Ser generoso con los <em>paddings</em></li>
+    </ul>
+    <script>
+        console.dir(document.querySelector('h2')) // selector CSS en formato string
+
+        console.log(document.querySelector('h2').textContent); //acceder a la propiedad textContent del h2
+
+        //Asigname a la variable titulo el textContent del h1
+        let titulo = document.querySelector('h1').textContent;
+        console.log("titulo del h1: ", titulo);
+
+        // Modifica la propiedad textContent del nodo h1, con el valor 'JavaScript mola'
+        document.querySelector('h1').textContent = 'JavaScript mola mogollón';
+
+        // Modifica la propiedad textContent del primer li, para que ponga 'No te frustres!'
+        document.querySelector('#primer-item').textContent = 'No te frustes!';
+
+        // Modifica los estilos el línea del texto 'paddings' para cambiar su color a 'green'
+        document.querySelector('em').style.color = 'rgb(0, 255, 0)';
+        document.querySelector('em').style.fontSize = '5rem';
+
+
+    </script>
+</body>
+
+</html>

@@ -15,4 +15,4 @@ cuenta = cuenta - 3; // 1100
 // restar
 cuenta--; //1099
 
-console.log(cuenta);
+console.log(cuenta );

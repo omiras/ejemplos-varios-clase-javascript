@@ -19,6 +19,8 @@ function saludar(persona) {
   }
 }
 
+saludar("Marcos");
+
 /**
  * Voy a crear una función que dado el precio de un producto me devuelva el IVA 16%
  */
