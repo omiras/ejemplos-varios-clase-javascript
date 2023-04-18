@@ -60,3 +60,4 @@ for (let i = 0; i < movimientos.length; i++) {
 }
 
 console.log(" Saldo actual:", saldo);
+

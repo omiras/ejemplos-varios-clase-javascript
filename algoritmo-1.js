@@ -7,6 +7,7 @@
 
 function isDivisible(n, x, y) {
   // comprobar si el n % x es igual 0 y si n % y es igual a 0
+  
   return n % x == 0 && n % y == 0;
 }
 

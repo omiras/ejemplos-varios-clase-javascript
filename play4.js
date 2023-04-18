@@ -33,6 +33,7 @@ if (soyMayorDeEdad) {
 
 // A la gente cuyo pokemon favorito no es Pikachu, no me parece normal
 
+// Declaramos la variable de nombre 'pokemonFAvorito' y le asignamos el valor de "Pikachu" que es de tipo string
 let pokemonFavorito = "Pikachu";
 
 if (pokemonFavorito != "Pikachu") {

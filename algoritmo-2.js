@@ -14,10 +14,23 @@ if bmi > 30 return "Obese"
 function bmi(weight, height) {
   // Primero, tenemos que calcular el IMC. Sabemos que bmi = weight / height^2. Hacer el cálculo, y guardarlo en una variable
   // Recomendación: mostrar por console.log a ver si hemos hecho bien el cálculo
+
+  let scale = "";
+
+  let bmiCalculated = weight / height ** 2;
+
   // Luego, en función de este valor, debemos retornar un string indicando pues en que franja está el individuo
+  if (bmiCalculated <= 18.5) {
+    scale = "Underweight";
+  } else if (bmiCalculated <= 25.0) {
+    scale = "Normal";
+  } else if (bmiCalculated <= 30.0) {
+    scale = "Overweight";
+  } else {
+    scale = "Obese";
+  }
 
-
-
+  return scale;
 }
 
 //Marcos
