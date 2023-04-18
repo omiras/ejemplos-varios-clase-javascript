@@ -1,5 +1,7 @@
 /**
- * rite function bmi that calculates body mass index (bmi = weight / height^2).
+ * https://www.codewars.com/kata/57a429e253ba3381850000fb
+ * 
+ * write function bmi that calculates body mass index (bmi = weight / height^2).
 
 if bmi <= 18.5 return "Underweight"
 
@@ -14,7 +16,7 @@ function bmi(weight, height) {
   // Recomendación: mostrar por console.log a ver si hemos hecho bien el cálculo
   // Luego, en función de este valor, debemos retornar un string indicando pues en que franja está el individuo
 
-    
+
 
 }
 
