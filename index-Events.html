@@ -18,6 +18,10 @@
 <body>
     <main class="container">
         <h1 class="container">Práctica con eventos</h1>
+        <h2>Carrito de compra</h2>
+        <div id="compras" class="container">
+
+        </div>
         <h2>Wonderboxes</h2>
         <select name="" id="filtro-actividades">
             <option value="todas">Todas las actividades</option>
@@ -30,7 +34,7 @@
             <h3>Apicultura</h3>
             <p>A disfrutar con abejas</p>
             <!-- Podemos asociar un evento en un atributo HTML. El valor (lo que va entre comillas) es directamente código JavaScript  -->
-            <button onclick="console.log('Añado la experiencia de las abejas al carrito de compra')">Adquirir</button>
+            <button onclick="añadirAlCarrito('Apicultura')">Adquirir</button>
         </article>
         <article>
             <h3>Escalada</h3>
@@ -45,6 +49,20 @@
         </article>
     </main>
     <script>
+        function añadirAlCarrito(actividad) {
+            // 1. Crear un nuevo nodo HTML
+            // Crear un nuevo Paragraph
+            let compra = document.createElement('p');
+
+            // 2. Rellenarlo con la estructura e información adecuada
+            compra.innerHTML = 'Nueva actividad: ' + actividad;
+
+            // 3. Añadirlo como hijo de otro nodo
+            // Paso 1: recuperamos el nodo padre 
+            let divCarrito = document.querySelector('#compras');
+            divCarrito.appendChild(compra);
+        }
+
         // 3 formas diferentes de asociar un evento a un elemento HTML
 
         // 1. Atributo HTML
@@ -52,7 +70,8 @@
         // 2. Todos los objetos del DOM tienen varias propiedades para definir eventos JavaScript. onclick, ondblclick, etc. 
         // Tenemos que asignarle una función a esa propiedad que el navegador va a ejecutar cuando hagamos click
         document.querySelector('#escalada').onclick = function () {
-            console.log('Añadir escalada al carrito de compra.')
+            console.log('Añadir escalada al carrito de compra.');
+            añadirAlCarrito('Escalada');
         }
 
         // Ejercicio. Asocia un evento click al botón de la experiencia de buceo, y cuando el usuario haga click muestra por consola 'Añadir experiencia de buceo al carrito.'. No copiar y pegar el querySelector, escribidlo todo. Si os da error, mirad la Console del navegador.
@@ -68,6 +87,8 @@
 
         // addEventListener es una función que tienen todos los objetos del DOM. Permiten asociar un evento a un elemento El primer parámetro, es el tipo de evento, formato string, y el segundo parámetro es una función que se va ejectutar cuando se capture el evento
         document.querySelector('#filtro-actividades').addEventListener('change', function () {
+
+            
 
             // Ejercicio: Recupera el nodo identificado con el id="filtro-actividades" y muestra por consola el valor de la propiedad 'value' de este objeto. Deberia salir el valor atributo 'value' de la opción seleccionada
             let filtroSeleccionado = document.querySelector('#filtro-actividades').value;
@@ -95,6 +116,13 @@
 
         // Existe un método para seleccionar todos los nodos HTML que tienen una class determinada. Le tienes poner el nombre de clase sin el .
         console.log(document.getElementsByClassName('container'));
+
+
+        // innerHTML
+        // La propiedad innerHTML contiene un string con todas etiquetas que contiene un tag 
+        document.querySelector('h1').innerHTML = "<span style='color:red'>Practica con <strong>Eventos</strong></span>";
+
+        // Hagan click en una de las experiencias, lo añadan a una especie de carrito de compra
 
     </script>
 </body>
