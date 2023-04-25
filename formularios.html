@@ -20,8 +20,8 @@
             <label for="nombre">Nombre: </label>
             <input id="nombre" type="text" maxlength="50" placeholder="Óscar" name="nombre" required>
 
-            <label for="Edad">Edad: </label>
-            <input id="Edad" name="edad" type="number" min="18" max="99" placeholder="24" required>
+            <label for="edad">Edad: </label>
+            <input id="edad" name="edad" type="number" min="18" max="99" placeholder="24" required>
 
             <label for="Dni">Dni: </label>
             <input type="text" id="dni" placeholder="000000000X" name="dni" pattern="[A-Z]?[0-9]{8}[A-Z]" required>
@@ -41,6 +41,19 @@
             <input type="submit" class="submit" id="submit" value="Enviar" />
 
     </form>
+    <script>
+        // añadimos un listener al input #edad. Cada vez que cambie el valor del input, vamos a ejecutar la funcion
+
+        // El objeto 'event' tiene información sobre el evento que se acaba de producir. La propiedad 'target' 
+
+        document.querySelector('#edad').addEventListener('change', function (event) {
+            console.dir('Edad: ', event.target.value);
+        });
+
+        // EJERCICIO: asociad el event 'change' al input de la ciudad de origen. Cada vez que cambie el valor del input, queremos ver por consola la ciudad que ha puesto el usuario en mayúsculas
+
+
+    </script>
 </body>
 
 </html>
