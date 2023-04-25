@@ -29,6 +29,9 @@ function obtenerIva(precio) {
   return iva;
 }
 
+obtenerIva(1);
+console.log(iva);
+
 let precioPatatas = 200;
 let ivaPatatas = obtenerIva(precioPatatas);
 
