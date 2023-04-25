@@ -44,13 +44,31 @@
     <script>
         // añadimos un listener al input #edad. Cada vez que cambie el valor del input, vamos a ejecutar la funcion
 
-        // El objeto 'event' tiene información sobre el evento que se acaba de producir. La propiedad 'target' 
+        // El objeto 'event' tiene información sobre el evento que se acaba de producir. La propiedad 'target' se refiere al elemento del DOM que ha capturado el evento. La propiedad 'value' es el valor actual del input 
+
+        console.dir(document.querySelector('#nombre'));
 
         document.querySelector('#edad').addEventListener('change', function (event) {
-            console.dir('Edad: ', event.target.value);
+            console.log('Edad: ', event.target.value);
         });
 
         // EJERCICIO: asociad el event 'change' al input de la ciudad de origen. Cada vez que cambie el valor del input, queremos ver por consola la ciudad que ha puesto el usuario en mayúsculas
+        document.querySelector('#Ciudad').addEventListener('change', function (event) {
+            const ciudadOrigen = event.target.value;
+            console.log('Ciudad: ', ciudadOrigen.toUpperCase());
+        });
+
+        /** evento 'input' */
+        document.querySelector('#dni').addEventListener('input', function (event) {
+            console.log('Dni: ', event.target.value);
+        });
+
+        /** EJERCICO : Asocia el  evento adecuado para que cada vez que gane el foco el input del dni, me muestre por consola 'Vas a escribir tu DNI? ' */
+        document.querySelector('#dni').addEventListener('focus', function () {
+            console.log('Vas a escribir tu DNI?');
+        });
+
+        
 
 
     </script>
