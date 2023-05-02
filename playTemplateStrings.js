@@ -5,7 +5,5 @@
 let edad = 40;
 let nombre = "Mad Max";
 
-let mensaje = `Hola me llamo         ${nombre.slice(1, -1)} y mi edad es ${
-  edad + 10
-}`;
+let mensaje = `Hola me llamo ${nombre} y mi edad es ${"39" + "1"}`;
 console.log(mensaje);
