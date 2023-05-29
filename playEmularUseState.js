@@ -7,6 +7,7 @@ function useState(valorInicial) {
   return [estadoInicial, functionParaActualizarElEstado];
 }
 
-const [emailFormulario, setEmailFormulario] = useState('');
+const [emailFormulario, setEmailFormulario] = useState("hola");
 
-setEmailFormulario('maria@gmail.com');
+console.log(emailFormulario);
+console.log(setEmailFormulario);
